@@ -1,5 +1,5 @@
 function rectangleTool () {
-    this.name = "rectangleTool";
+    this.name = "rectangle";
     //https://www.flaticon.com/free-icon/rectangle_5895916 
 	this.icon = "assets/rectangleTool.png";
 
