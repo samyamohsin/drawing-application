@@ -20,9 +20,10 @@ function rectangleTool () {
                 loadPixels();
             } else {
                 updatePixels();
-
+                //this allows the retangle to be draw from where the mouse was first clicked to its ending postion
                 rect(startMouseX, startMouseY, abs(mouseX - startMouseX), abs(mouseY - startMouseY) );
             }
+            //once the mouse has been released it will draw the rectangle
         } else if (drawing) {
             drawing = false;
             startMouseX = -1;
