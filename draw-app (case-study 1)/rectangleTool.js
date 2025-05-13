@@ -8,7 +8,7 @@ function rectangleTool () {
     var drawing  = false;
 
     this.draw = function() {
-        if(mousePressed) {
+        if(mouseIsPressed) {
             if(startMouseX == -1) {
                 startMouseX = mouseX;
                 startMouseY = mouseY;
