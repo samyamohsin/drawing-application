@@ -19,7 +19,7 @@ function rectangleTool () {
 
                 rect(startMouseX, startMouseY, abs(mouseX - startMouseX), abs(mouseY - startMouseY) );
             }
-        } else is (drawing) {
+        } else if (drawing) {
             drawing = false;
             startMouseX = -1;
             startMouseY = -1;
