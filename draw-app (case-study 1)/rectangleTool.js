@@ -17,7 +17,9 @@ function rectangleTool () {
             } else {
                 updatePixel();
 
-                rect(startMouseX, startMouseY, abs(mouseX - startMouseX), abs(mouseY - startMouseY) );
+                rect(startMouseX, startMouseY, 
+                    abs(mouseX - startMouseX), 
+                    abs(mouseY - startMouseY) );
             }
         } else if (drawing) {
             drawing = false;
