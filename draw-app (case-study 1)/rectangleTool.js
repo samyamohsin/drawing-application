@@ -14,9 +14,9 @@ function rectangleTool () {
                 startMouseY = mouseY;
                 drawing = true;
 
-                loadPixel();
+                loadPixels();
             } else {
-                updatePixel();
+                updatePixels();
 
                 rect(startMouseX, 
                     startMouseY, 
