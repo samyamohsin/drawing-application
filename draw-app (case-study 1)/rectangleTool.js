@@ -1,5 +1,5 @@
 function rectangleTool () {
-    this.name = "RectangleTool";
+    this.name = "rectangleTool";
 	//this.icon = "";
 
     var startMouseX = -1;
