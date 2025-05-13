@@ -1,7 +1,7 @@
 function rectangleTool () {
     this.name = "rectangle";
     //https://www.flaticon.com/free-icon/rectangle_5895916 
-	this.icon = "assets/rectangleTool.png";
+	this.icon = "assets/rectangle.png";
 
     var startMouseX = -1;
     var startMouseY = -1;
