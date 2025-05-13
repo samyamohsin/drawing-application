@@ -17,7 +17,8 @@ function rectangleTool () {
             } else {
                 updatePixel();
 
-                rect(startMouseX, startMouseY, 
+                rect(startMouseX, 
+                    startMouseY, 
                     abs(mouseX - startMouseX), 
                     abs(mouseY - startMouseY) );
             }
