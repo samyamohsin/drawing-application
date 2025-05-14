@@ -6,9 +6,6 @@ function blurTool() {
     let drawMode = true; // true = draw, false = blur
       let brushSize = 40;
 
-      function setup() {
-        createCanvas(600, 400);
-        background(255);
 
         // Add a button to toggle modes
         let button = createButton('Toggle Draw/Blur');
@@ -16,6 +13,5 @@ function blurTool() {
         button.mousePressed(() => {
           drawMode = !drawMode;
         });
-      }
 
 }
