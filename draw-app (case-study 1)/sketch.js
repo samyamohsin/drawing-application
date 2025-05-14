@@ -25,6 +25,8 @@ function setup() {
 	toolbox.addTool(new SprayCanTool());
 	toolbox.addTool(new mirrorDrawTool());
 	toolbox.addTool(new rectangleTool());
+	toolbox.addTool(new blurTool());
+	toolbox.addTool(new eraserTool());
 	background(255);
 
 	sliderR = createSlider();
