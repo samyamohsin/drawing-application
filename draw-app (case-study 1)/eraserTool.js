@@ -31,4 +31,7 @@ function eraserTool () {
 			previousMouseY = -1;
 		}
 	};
+
+    strokeWeight(3);
+		stroke("white");
 }
