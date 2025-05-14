@@ -30,17 +30,17 @@ function setup() {
 	background(255);
 
 	sliderR = createSlider();
-	sliderR.position(width/2, 600);
+	sliderR.position(width/2, 560);
 	sliderR.style('width', '150px');
   
 	// Green slider
 	sliderG = createSlider();
-	sliderG.position(width/2 , 650);
+	sliderG.position(width/2 , 600);
 	sliderG.style('width', '150px');
   
 	// Blue slider
 	sliderB = createSlider();
-	sliderB.position(width/2 , 700);
+	sliderB.position(width/2 , 640);
 	sliderB.style('width', '150px');
 
 }
