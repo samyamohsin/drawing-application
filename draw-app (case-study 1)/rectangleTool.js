@@ -18,6 +18,7 @@ function rectangleTool () {
                 drawing = true;
 
                 loadPixels();
+                
             } else {
                 updatePixels();
                 //this allows the retangle to be draw from where the mouse was first clicked to its ending postion
