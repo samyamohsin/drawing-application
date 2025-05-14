@@ -3,6 +3,7 @@
 var toolbox = null;
 var colourP = null;
 var helpers = null;
+let sliderR,sliderG,sliderB
 
 function setup() {
 
@@ -26,13 +27,31 @@ function setup() {
 	toolbox.addTool(new rectangleTool());
 	background(255);
 
+	sliderR = createSlider();
+	sliderR.position(width/2, 600);
+	sliderR.style('width', '150px');
+  
+	// Green slider
+	sliderG = createSlider();
+	sliderG.position(width/2 , 650);
+	sliderG.style('width', '150px');
+  
+	// Blue slider
+	sliderB = createSlider();
+	sliderB.position(width/2 , 700);
+	sliderB.style('width', '150px');
+
 }
 
 function draw() {
 	//call the draw function from the selected tool.
 	//hasOwnProperty is a javascript function that tests
 	//if an object contains a particular method or property
-	//if there isn't a draw method the app will alert the user
+	//if there isn't a draw method the app will alert the use
+
+
+
+
 	if (toolbox.selectedTool.hasOwnProperty("draw")) {
 		toolbox.selectedTool.draw();
 	} else {

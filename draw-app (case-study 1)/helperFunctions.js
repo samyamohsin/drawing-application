@@ -18,4 +18,7 @@ function HelperFunctions() {
 	select("#saveImageButton").mouseClicked(function() {
 		saveCanvas('drawing.png');
 	});
+
+	
+
 }

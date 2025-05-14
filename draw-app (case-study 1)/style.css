@@ -6,6 +6,7 @@ html, body {
 #sidebar {
 	grid-area: sidebar;
 	overflow-y: scroll;
+	background-color: #0000004a;
 }
 
 #content {
@@ -67,7 +68,7 @@ html, body {
 		color: #444;
 	}
 .box {
-  background-color: #444;
+  background-color: hsla(0, 0%, 0%, 0.233);
   color: #fff;
   font-size: 150%;
 }
