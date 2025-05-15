@@ -35,6 +35,54 @@ function ColourPalette() {
 		fill(this.colours[0]);
 		stroke(this.colours[0]);
 
+		//changes the thickness of the shapes and brushes
+		sliderA = createSlider(1, 10, 1);
+		sliderA.position(320, windowHeight - 150);
+		sliderA.style('width', '150px');
+
+		// Red slider
+		sliderR = createSlider(0, 255, 0);
+		sliderR.position(320, windowHeight - 110);
+		sliderR.style('width', '150px');
+  
+		// Green slider
+		sliderG = createSlider(0, 255, 0);
+		sliderG.position(320, windowHeight - 70);
+		sliderG.style('width', '150px');
+  
+		// Blue slider
+		sliderB = createSlider(0, 255, 0);
+		sliderB.position(320, windowHeight - 30);
+		sliderB.style('width', '150px');
+
+		let thicknessLabel = createDiv('Thickness');
+		thicknessLabel.position(480, windowHeight - 150);
+		
+		let redLabel = createDiv('Red');
+		redLabel.position(480, windowHeight - 110);
+		
+		let greenLabel = createDiv('Green');
+		greenLabel.position(480, windowHeight - 70);
+		
+		let blueLabel = createDiv('Blue');
+		blueLabel.position(480, windowHeight - 30);
+		// Function to update color based on RGB values
+		function updateCustomColor() {
+			let r = sliderR.value();
+			let g = sliderG.value();
+			let b = sliderB.value();
+			let customColor = color(r, g, b);
+			self.selectedColour = customColor;
+			fill(customColor);
+			stroke(customColor);
+
+		}
+
+		// Add change event listeners to RGB sliders
+		sliderR.input(updateCustomColor);
+		sliderG.input(updateCustomColor);
+		sliderB.input(updateCustomColor);
+
 		//for each colour create a new div in the html for the colourSwatches
 		for (var i = 0; i < this.colours.length; i++) {
 			var colourID = this.colours[i] + "Swatch";

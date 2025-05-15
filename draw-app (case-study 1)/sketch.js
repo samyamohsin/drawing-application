@@ -29,24 +29,6 @@ function setup() {
 	toolbox.addTool(new paintBucketTool());
 	background(255);
 	
-	//changes the thickness of the shapes and brushes
-	sliderA = createSlider(1, 10, 1);
-	sliderA.position(320, 650);
-	sliderA.style('width', '150px');
-
-	sliderR = createSlider();
-	sliderR.position(320, 680);
-	sliderR.style('width', '150px');
-  
-	// Green slider
-	sliderG = createSlider();
-	sliderG.position(320, 710);
-	sliderG.style('width', '150px');
-  
-	// Blue slider
-	sliderB = createSlider();
-	sliderB.position(320 , 740);
-	sliderB.style('width', '150px');
 
 }
 
@@ -55,17 +37,9 @@ function draw() {
 	//hasOwnProperty is a javascript function that tests
 	//if an object contains a particular method or property
 	//if there isn't a draw method the app will alert the use
-	let r = sliderR.value();
-	let g = sliderG.value();
-	let b = sliderB.value();
-	let a = sliderA.value();
   
-	fill(r, g, b, a);
-	rect(500, 100, 100, 100);
-
 	let value = sliderA.value();
 	strokeWeight(value);
-
 
 	if (toolbox.selectedTool.hasOwnProperty("draw")) {
 		toolbox.selectedTool.draw();
