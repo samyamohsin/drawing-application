@@ -50,6 +50,13 @@ function draw() {
 	//hasOwnProperty is a javascript function that tests
 	//if an object contains a particular method or property
 	//if there isn't a draw method the app will alert the use
+	let r = sliderR.value();
+	let g = sliderG.value();
+	let b = sliderB.value();
+  
+	fill(r, g, b);
+	rect(500, 100, 100, 100);
+
 	let value = sliderR.value();
 	strokeWeight(value);
 
