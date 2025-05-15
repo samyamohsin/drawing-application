@@ -45,12 +45,12 @@ function ColourPalette() {
 		sliderR.position(500, windowHeight - 110);
 		sliderR.style('width', '150px');
   
-		// Green slider
+		// Green value slider
 		sliderG = createSlider(0, 255, 0);
 		sliderG.position(500, windowHeight - 70);
 		sliderG.style('width', '150px');
   
-		// Blue slider
+		// Blue value slider
 		sliderB = createSlider(0, 255, 0);
 		sliderB.position(500, windowHeight - 30);
 		sliderB.style('width', '150px');
@@ -58,13 +58,13 @@ function ColourPalette() {
 		let thicknessLabel = createDiv('Thickness');
 		thicknessLabel.position(430, windowHeight - 150);
 		
-		let redLabel = createDiv('Red');
+		let redLabel = createDiv('Red Value');
 		redLabel.position(430, windowHeight - 110);
 		
-		let greenLabel = createDiv('Green');
+		let greenLabel = createDiv('Green Value');
 		greenLabel.position(430, windowHeight - 70);
 		
-		let blueLabel = createDiv('Blue');
+		let blueLabel = createDiv('Blue Value');
 		blueLabel.position(430, windowHeight - 30);
 		// Function to update color based on RGB values
 		function updateCustomColor() {

@@ -2,7 +2,7 @@ function paintBucketTool () {
 	//https://www.flaticon.com/free-icon/varnish_1815785?term=paint+bucket&page=1&position=4&origin=tag&related_id=1815785
     this.icon = "assets/paintBucket.png";
     this.name = "bucket";
-
+//when tool is clicked, the color selected can fill the background.
     this.draw = function () {
 
          if(mouseIsPressed){

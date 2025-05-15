@@ -3,6 +3,7 @@
 var toolbox = null;
 var colourP = null;
 var helpers = null;
+//slider 
 let sliderR,sliderG,sliderB, sliderA
 
 function setup() {
@@ -38,6 +39,7 @@ function draw() {
 	//if an object contains a particular method or property
 	//if there isn't a draw method the app will alert the use
   
+	//the 
 	let value = sliderA.value();
 	strokeWeight(value);
 
