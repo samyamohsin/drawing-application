@@ -4,42 +4,45 @@ function paintBucketTool () {
     this.name = "bucket";
 //when tool is clicked, the color selected can fill the background.
     this.draw = function () {
+		if(mouseIspressed) {
+     let clr = get(mouuseY,mouseX);
+	 loadPixels();
 
-         if(mouseIsPressed){
-			let c = get(mouseX, mouseY);
-			
-			loadPixels();
-			
-			let targetColor = c;
-			let fillColor = color(colourP.selectedColour);
-			let stack = [[mouseX, mouseY]];
-			let visited = new Set();
-			
-			while(stack.length > 0){
+	 let stack = [[mouseY,mouseX]];
+	 let fillColor = color(colourP.selectedColour);
+	 let targetColor = clr
+	 let  v = new Set();
+	 
+	 	while(stack.length > 0){
 				let [x, y] = stack.pop();
-				let key = `${x},${y}`;
-				 if(visited.has(key) || x < 0 || x >= width || y < 0 || y >= height) continue;
-				
-				let currentColor = get(x, y);
-				 if(!this.colorsMatch(currentColor, targetColor)) continue;
-				
-				visited.add(key);
-				
-				set(x, y, fillColor);
-				
-				stack.push([x+1, y]);
-				stack.push([x-1, y]);
-				stack.push([x, y+1]);
-				stack.push([x, y-1]);
-			}
-			updatePixels();
+				let keys = `${x},${y}`;
+				 if(visited.has(keys) || x<0 || x >= width || y<0 || y>=height) continue;
+
+
+
+let currentColor = get(x,y);
+ if(!this.colorsMatch(currentColor, targetColor)) continue;
+
+ v.add(keys);
+ set(x,y,fillColor0);
+
+ stack.push([x+2,y]);
+ stack.push([x-2,y]);
+ stack.push([x,y + 2]);
+ stack.push([x,y +2]);
+
 		}
-	};
+
+updatePixels();
 
 
 
 	this.colorsMatch = function(c1, c2) {
-		return c1[0] === c2[0] && c1[1] === c2[1] && c1[2] === c2[2];
-	};
+		return clr1[0] === clr[0] && clr[1] === clr[1] && clr[2] === clr[2];
 
-}
+	
+
+		}
+
+	}
+}}
