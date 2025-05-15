@@ -7,7 +7,7 @@ function eraserTool () {
     let size = 20;
 
     this.draw = function () {
-        if(mouseIsPressed && mouseY < height) {
+        if(mouseIsPressed && mouseX < width) {
             if(keyIsDown(SHIFT)) {
                 erase();
                 //strokeWeight(size);
@@ -21,3 +21,5 @@ function eraserTool () {
         }
     }
 }
+
+
