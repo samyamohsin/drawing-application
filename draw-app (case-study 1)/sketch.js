@@ -29,18 +29,18 @@ function setup() {
 	toolbox.addTool(new eraserTool());
 	background(255);
 
-	sliderR = createSlider();
-	sliderR.position(width/2, 560);
+	sliderR = createSlider(1, 10, 1);
+	sliderR.position(width/2, 600);
 	sliderR.style('width', '150px');
   
 	// Green slider
 	sliderG = createSlider();
-	sliderG.position(width/2 , 600);
+	sliderG.position(width/2 , 650);
 	sliderG.style('width', '150px');
   
 	// Blue slider
 	sliderB = createSlider();
-	sliderB.position(width/2 , 640);
+	sliderB.position(width/2 , 700);
 	sliderB.style('width', '150px');
 
 }
@@ -50,8 +50,8 @@ function draw() {
 	//hasOwnProperty is a javascript function that tests
 	//if an object contains a particular method or property
 	//if there isn't a draw method the app will alert the use
-
-
+	let value = sliderR.value();
+	strokeWeight(value);
 
 
 	if (toolbox.selectedTool.hasOwnProperty("draw")) {
