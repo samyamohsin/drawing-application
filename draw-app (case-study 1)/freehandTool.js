@@ -11,7 +11,7 @@ function FreehandTool(){
 	var previousMouseY = -1;
 
 	this.draw = function(){
-		strokeWeight(1);
+		//strokeWeight(1);
 		//if the mouse is pressed
 		if(mouseIsPressed){
 			//check if they previousX and Y are -1. set them to the current
