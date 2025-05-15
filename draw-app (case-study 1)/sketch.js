@@ -27,6 +27,7 @@ function setup() {
 	toolbox.addTool(new rectangleTool());
 	toolbox.addTool(new blurTool());
 	toolbox.addTool(new eraserTool());
+	toolbox.addTool(new paintBucketTool());
 	background(255);
 	
 	//changes the thickness of the shapes and brushes
