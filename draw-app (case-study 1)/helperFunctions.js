@@ -13,16 +13,6 @@ function HelperFunctions() {
 		loadPixels();
 	});
 
-	select("#undoButton").mouseClicked(function() {
-		if (undoStack.length > 0) {
-			let lastState= undoStack.pop();
-			loadPixels();
-			for(let i = 0; i < pixels.length; i++) {
-				pixels[i] = lastState[i]
-			}
-			updatePixels()
-		}
-	})
 
 	//event handler for the save image button. saves the canvsa to the
 	//local file system.
