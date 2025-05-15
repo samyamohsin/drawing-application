@@ -13,6 +13,7 @@ function HelperFunctions() {
 		loadPixels();
 	});
 
+
 	//event handler for the save image button. saves the canvsa to the
 	//local file system.
 	select("#saveImageButton").mouseClicked(function() {
