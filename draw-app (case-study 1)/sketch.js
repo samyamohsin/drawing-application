@@ -28,7 +28,8 @@ function setup() {
 	toolbox.addTool(new blurTool());
 	toolbox.addTool(new eraserTool());
 	background(255);
-
+	
+	//changes the thickness of the shapes and brushes
 	sliderA = createSlider(1, 10, 1);
 	sliderA.position(width/2, 550);
 	sliderA.style('width', '150px');
