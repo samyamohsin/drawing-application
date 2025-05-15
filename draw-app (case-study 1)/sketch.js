@@ -3,7 +3,7 @@
 var toolbox = null;
 var colourP = null;
 var helpers = null;
-let sliderR,sliderG,sliderB
+let sliderR,sliderG,sliderB, sliderA
 
 function setup() {
 
@@ -29,7 +29,11 @@ function setup() {
 	toolbox.addTool(new eraserTool());
 	background(255);
 
-	sliderR = createSlider(1, 10, 1);
+	sliderA = createSlider(1, 10, 1);
+	sliderA.position(width/2, 550);
+	sliderA.style('width', '150px');
+
+	sliderR = createSlider();
 	sliderR.position(width/2, 600);
 	sliderR.style('width', '150px');
   
@@ -53,11 +57,12 @@ function draw() {
 	let r = sliderR.value();
 	let g = sliderG.value();
 	let b = sliderB.value();
+	let a = sliderA.value();
   
-	fill(r, g, b);
+	fill(r, g, b, a);
 	rect(500, 100, 100, 100);
 
-	let value = sliderR.value();
+	let value = sliderA.value();
 	strokeWeight(value);
 
 
