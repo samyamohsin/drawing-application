@@ -31,21 +31,21 @@ function setup() {
 	
 	//changes the thickness of the shapes and brushes
 	sliderA = createSlider(1, 10, 1);
-	sliderA.position(width/2, 650);
+	sliderA.position(320, 650);
 	sliderA.style('width', '150px');
 
 	sliderR = createSlider();
-	sliderR.position(width/2, 680);
+	sliderR.position(320, 680);
 	sliderR.style('width', '150px');
   
 	// Green slider
 	sliderG = createSlider();
-	sliderG.position(width/2 , 710);
+	sliderG.position(320, 710);
 	sliderG.style('width', '150px');
   
 	// Blue slider
 	sliderB = createSlider();
-	sliderB.position(width/2 , 740);
+	sliderB.position(320 , 740);
 	sliderB.style('width', '150px');
 
 }
