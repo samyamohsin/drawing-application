@@ -9,11 +9,10 @@ function eraserTool () {
             if(keyIsDown(SHIFT)) {
                 erase();
                 line(pmouseX, pmouseY, mouseX, mouseY);
-                noErase();
             } else {
                 stroke("white");
                 line(pmouseX, pmouseY, mouseX, mouseY);
-            }
+             }
         }
     }
 }
