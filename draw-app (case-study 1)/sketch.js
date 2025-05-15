@@ -32,21 +32,21 @@ function setup() {
 	
 	//changes the thickness of the shapes and brushes
 	sliderA = createSlider(1, 10, 1);
-	sliderA.position(320, 650);
+	sliderA.position(500, 650);
 	sliderA.style('width', '150px');
 
 	sliderR = createSlider();
-	sliderR.position(320, 680);
+	sliderR.position(500, 680);
 	sliderR.style('width', '150px');
   
 	// Green slider
 	sliderG = createSlider();
-	sliderG.position(320, 710);
+	sliderG.position(500, 710);
 	sliderG.style('width', '150px');
   
 	// Blue slider
 	sliderB = createSlider();
-	sliderB.position(320 , 740);
+	sliderB.position(500 , 750);
 	sliderB.style('width', '150px');
 
 }
@@ -56,6 +56,10 @@ function draw() {
 	//hasOwnProperty is a javascript function that tests
 	//if an object contains a particular method or property
 	//if there isn't a draw method the app will alert the use
+
+	text("blahhh",50,50,700,600);
+	
+	
 	let r = sliderR.value();
 	let g = sliderG.value();
 	let b = sliderB.value();
