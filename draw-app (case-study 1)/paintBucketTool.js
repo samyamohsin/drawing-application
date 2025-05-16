@@ -26,7 +26,7 @@ let currentColor = get(x,y);
  set(x,y,fillColor);
 
  stack.push([x+1,y]);
- stack.push([x1,y]);
+ stack.push([x-1,y]);
  stack.push([x,y + 1]);
  stack.push([x,y +1]);
 
