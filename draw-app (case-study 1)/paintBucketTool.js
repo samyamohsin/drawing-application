@@ -7,9 +7,8 @@ function paintBucketTool () {
 		if(mouseIspressed) {
      let clr = get(mouuseY,mouseX);
 	 loadPixels();
-
-	 let stack = [[mouseY,mouseX]];
 	 let fillColor = color(colourP.selectedColour);
+	 let stack = [[mouseY,mouseX]];
 	 let targetColor = clr
 	 let  v = new Set();
 	 
@@ -24,12 +23,12 @@ let currentColor = get(x,y);
  if(!this.colorsMatch(currentColor, targetColor)) continue;
 
  v.add(keys);
- set(x,y,fillColor0);
+ set(x,y,fillColor);
 
- stack.push([x+2,y]);
- stack.push([x-2,y]);
- stack.push([x,y + 2]);
- stack.push([x,y +2]);
+ stack.push([x+1,y]);
+ stack.push([x1,y]);
+ stack.push([x,y + 1]);
+ stack.push([x,y +1]);
 
 		}
 
@@ -38,7 +37,7 @@ updatePixels();
 
 
 	this.colorsMatch = function(c1, c2) {
-		return clr1[0] === clr[0] && clr[1] === clr[1] && clr[2] === clr[2];
+		return clr1[0] === clr2[0] && clr1[1] === clr2[1] && clr1[2] === clr2[2];
 
 	
 
