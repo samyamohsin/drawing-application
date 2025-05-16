@@ -24,17 +24,14 @@ let currentColor = get(x,y);
  visited.add(keys);
  set(x,y,fillColor);
 
- stack.push([x+3,y]);
- stack.push([x-3,y]);
- stack.push([x,y + 3]);
- stack.push([x,y - 3]);
+ stack.push([x+1,y]);
+ stack.push([x-1,y]);
+ stack.push([x,y + 1]);
+ stack.push([x,y - 1]);
 
 		}
 
 updatePixels();
-
-
-
 	this.colorsMatch = function(clr1, clr2) {
 		return clr1[0] === clr2[0] && clr1[1] === clr2[1] && clr1[2] === clr2[2];
 	};
