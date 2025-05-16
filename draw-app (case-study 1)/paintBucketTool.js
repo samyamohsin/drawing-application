@@ -14,15 +14,15 @@ function paintBucketTool () {
 	 
 	 	while(stack.length > 0){
 				let [x, y] = stack.pop();
-				let keys = `${x},${y}`;
-				 if(visited.has(keys) || x<0 || x >= width || y<0 || y>=height) continue;
+				let key = `${x},${y}`;
+				 if(visited.has(key) || x<0 || x >= width || y<0 || y>=height) continue;
 
 
 
 let currentColor = get(x,y);
  if(!this.colorsMatch(currentColor, targetColor)) continue;
 
- v.add(keys);
+ v.add(key);
  set(x,y,fillColor);
 
  stack.push([x+1,y]);
