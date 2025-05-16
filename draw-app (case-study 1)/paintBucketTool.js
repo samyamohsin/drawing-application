@@ -10,22 +10,22 @@ function paintBucketTool () {
 	 let stack = [[mouseX,mouseY]];
 	 let targetColor = c;
 	let fillColor = color(colourP.selectedColour);
-	 let  v = new Set();
+	 let  visited = new Set();
 	 
 	 	while(stack.length > 0){
 				let [x, y] = stack.pop();
-				let keys = `${x},${y}`;
-				 if(v.has(keys) || x<0 || x >= width || y<0 || y>=height) continue;
 				let key = `${x},${y}`;
 				 if(visited.has(key) || x<0 || x >= width || y<0 || y>=height) continue;
+				//let key = `${x},${y}`;
+				// if(visited.has(key) || x<0 || x >= width || y<0 || y>=height) continue;
 
 
 
 let currentColor = get(x,y);
  if(!this.colorsMatch(currentColor, targetColor)) continue;
 
- visited.add(keys);
- v.add(key);
+ visited.add(key);
+ //v.add(key);
  set(x,y,fillColor);
 
  stack.push([x+1,y]);
