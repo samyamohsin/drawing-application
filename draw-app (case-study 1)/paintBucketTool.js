@@ -24,10 +24,10 @@ let currentColor = get(x,y);
  visited.add(keys);
  set(x,y,fillColor);
 
- stack.push([x+1,y]);
- stack.push([x-1,y]);
- stack.push([x,y + 1]);
- stack.push([x,y - 1]);
+ stack.push([x+3,y]);
+ stack.push([x-3,y]);
+ stack.push([x,y + 3]);
+ stack.push([x,y - 3]);
 
 		}
 
