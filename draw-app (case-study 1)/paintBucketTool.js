@@ -16,16 +16,13 @@ function paintBucketTool () {
 				let [x, y] = stack.pop();
 				let key = `${x},${y}`;
 				 if(visited.has(key) || x<0 || x >= width || y<0 || y>=height) continue;
-				//let key = `${x},${y}`;
-				// if(visited.has(key) || x<0 || x >= width || y<0 || y>=height) continue;
-
+				
 
 
 let currentColor = get(x,y);
  if(!this.colorsMatch(currentColor, targetColor)) continue;
 
  visited.add(key);
- //v.add(key);
  set(x,y,fillColor);
 
  stack.push([x+1,y]);
