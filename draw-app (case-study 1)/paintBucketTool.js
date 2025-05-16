@@ -5,24 +5,24 @@ function paintBucketTool () {
 //when tool is clicked, the color selected can fill the background.
     this.draw = function () {
 		if(mouseIsPressed) {
-     let clr = get(mouuseX,mouseY);
+     let c = get(mouseX,mouseY);
 	 loadPixels();
 	 let stack = [[mouseX,mouseY]];
-	 let targetColor = clr;
-	  let fillColor = color(colourP.selectedColour);
+	 let targetColor = c;
+	let fillColor = color(colourP.selectedColour);
 	 let  v = new Set();
 	 
 	 	while(stack.length > 0){
 				let [x, y] = stack.pop();
 				let keys = `${x},${y}`;
-				 if(visited.has(keys) || x<0 || x >= width || y<0 || y>=height) continue;
+				 if(v.has(keys) || x<0 || x >= width || y<0 || y>=height) continue;
 
 
 
 let currentColor = get(x,y);
  if(!this.colorsMatch(currentColor, targetColor)) continue;
 
- v.add(keys);
+ visited.add(keys);
  set(x,y,fillColor);
 
  stack.push([x+1,y]);
@@ -36,8 +36,8 @@ updatePixels();
 
 
 
-	this.colorsMatch = function(clr1, clr2) {
-		return clr1[0] === clr2[0] && clr1[1] === clr2[1] && clr1[2] === clr2[2];
+	this.colorsMatch = function(c1, c2) {
+		return c1[0] === c2[0] && c1[1] === c2[1] && c1[2] === c2[2];
 
 	
 
