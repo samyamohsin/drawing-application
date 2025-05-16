@@ -30,7 +30,7 @@ function ColourPalette() {
 
 	//load in the colours
 	this.loadColours = function() {
-		//set the fill and stroke properties to be black at the start of the programme
+		//set the fill and stroke properties to be black
 		//running
 		fill(this.colours[0]);
 		stroke(this.colours[0]);
@@ -66,7 +66,7 @@ function ColourPalette() {
 		
 		let blueLabel = createDiv('Blue Value');
 		blueLabel.position(430, windowHeight - 30);
-		// Function to update color based on RGB values
+		// updates color based on RGB values
 		function updateCustomColor() {
 			let r = sliderR.value();
 			let g = sliderG.value();
@@ -78,7 +78,6 @@ function ColourPalette() {
 
 		}
 
-		// Add change event listeners to RGB sliders
 		sliderR.input(updateCustomColor);
 		sliderG.input(updateCustomColor);
 		sliderB.input(updateCustomColor);
@@ -87,8 +86,7 @@ function ColourPalette() {
 		for (var i = 0; i < this.colours.length; i++) {
 			var colourID = this.colours[i] + "Swatch";
 
-			// Add the swatch to the palette and set its background
-			// colour to be the colour value.
+			// colour value.
 			var colourSwatch = createDiv();
 			colourSwatch.class("colourSwatches");
 
@@ -101,6 +99,6 @@ function ColourPalette() {
 
 		select(".colourSwatches").style("border", "2px solid blue");
 	};
-	//call the loadColours function now it is declared
+	//call the loadColours
 	this.loadColours();
 }
